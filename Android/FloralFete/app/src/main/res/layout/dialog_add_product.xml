@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Product Name -->
+    <EditText
+        android:id="@+id/etProductName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Name"
+        android:inputType="text" />
+
+    <!-- Product Description -->
+    <EditText
+        android:id="@+id/etProductDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Description"
+        android:inputType="textMultiLine" />
+
+    <!-- Price -->
+    <EditText
+        android:id="@+id/etProductPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Price"
+        android:inputType="numberDecimal" />
+
+    <!-- Quantity -->
+    <EditText
+        android:id="@+id/etProductQty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Product Quantity"
+        android:inputType="number" />
+
+    <!-- Flower Type Spinner -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Flower Type"
+        android:textStyle="bold"
+        android:paddingTop="8dp" />
+
+    <Spinner
+        android:id="@+id/spinnerFlowerType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"/>
+
+    <!-- Occasion Selection (Chips) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Occasions"
+        android:textStyle="bold"
+        android:paddingTop="8dp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupOccasions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+
+        android:checkableBehavior="all"/>
+
+    <!-- Image Preview -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:overScrollMode="always">
+
+        <LinearLayout
+            android:id="@+id/imagePreviewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnPickImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick Images" />
+
+
+    <!-- Save Product Button -->
+    <Button
+        android:id="@+id/btnSaveProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Product"
+        android:backgroundTint="@color/theme_color"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="12dp"/>
+</LinearLayout>

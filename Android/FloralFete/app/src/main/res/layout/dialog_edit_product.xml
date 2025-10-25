@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Dialog Title -->
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit Product"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10dp"/>
+
+        <!-- Image Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="10dp">
+
+            <!-- Product Image 1 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/productImageView1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_product"
+                    android:layout_gravity="center"
+                    android:padding="5dp"/>
+
+                <Button
+                    android:id="@+id/changeImageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!-- Product Image 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/productImageView2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_product"
+                    android:layout_gravity="center"
+                    android:padding="5dp"/>
+
+                <Button
+                    android:id="@+id/changeImageButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!-- Product Image 3 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/productImageView3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_product"
+                    android:layout_gravity="center"
+                    android:padding="5dp"/>
+
+                <Button
+                    android:id="@+id/changeImageButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Change"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Product Name -->
+        <EditText
+            android:id="@+id/productNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Name"
+            android:inputType="text"
+            android:padding="10dp"/>
+
+        <!-- Product Description -->
+        <EditText
+            android:id="@+id/productDescriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Description"
+            android:inputType="textMultiLine"
+            android:minHeight="100dp"
+            android:padding="10dp"/>
+
+        <!-- Product Price -->
+        <EditText
+            android:id="@+id/productPriceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Price"
+            android:inputType="numberDecimal"
+            android:padding="10dp"/>
+
+        <!-- Product Quantity -->
+        <EditText
+            android:id="@+id/productQtyEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Product Quantity"
+            android:inputType="number"
+            android:padding="10dp"/>
+
+        <!-- Flower Type Spinner -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flower Type"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerFlowerType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"/>
+
+        <!-- Occasion Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Occasions"
+            android:textStyle="bold"
+            android:paddingTop="10dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupOccasions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:checkableBehavior="all"/>
+        </ScrollView>
+
+        <!-- Update Product Button -->
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Product"
+            android:textAllCaps="false"
+            android:padding="12dp"
+            android:backgroundTint="@color/theme_color"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+</ScrollView>

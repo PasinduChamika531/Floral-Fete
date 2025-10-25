@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="theme_color">#ffb6b5</color>
+    <color name="box_theme_color">#D59A99</color>
+    <color name="box_theme_color2">#5DD59A99</color>
+    <color name="spinner_theme_color">#80FFB6B5</color>
+    <color name="home_background_color">#EBEAEA</color>
+    <color name="gray">#E2E2E2</color>
+    <color name="light_gray">#EFEFEF</color>
+    <color name="lighter_gray">#F0F0F0</color>
+    <color name="dark_gray">#7E7E7E</color>
+    <color name="green">#32CD32</color>
+    <color name="red">#E91E1E</color>
+
+
+    <color name="processing">#FFA500</color> <!-- Orange -->
+    <color name="packing">#FFD700</color> <!-- Gold -->
+    <color name="shipped">#1E90FF</color> <!-- Dodger Blue -->
+    <color name="delivered">#32CD32</color> <!-- Lime Green -->
+    <color name="default_gray">#A9A9A9</color> <!-- Dark Gray -->
+
+</resources>

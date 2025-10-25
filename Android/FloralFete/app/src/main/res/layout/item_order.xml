@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:elevation="2dp"
+    android:layout_margin="8dp">
+
+    <!-- Order ID -->
+    <TextView
+        android:id="@+id/user_text_order_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order ID: 123456"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"/>
+
+    <!-- Order Date -->
+    <TextView
+        android:id="@+id/user_text_order_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cherryswash_regular"
+        android:text="Ordered On: 12 Feb 2025"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp" />
+
+    <!-- Order Total -->
+    <TextView
+        android:id="@+id/user_text_order_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cherryswash_regular"
+        android:text="Total: Rs. 1500.00"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <!-- Progress Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/user_text_order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cherryswash_bold"
+            android:text="Status: Processing"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/user_order_progress_bar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="12dp"-->
+<!--            android:layout_marginTop="4dp"-->
+<!--            style="?android:attr/progressBarStyleHorizontal"-->
+<!--            android:progressDrawable="@drawable/progress_bar_states"-->
+<!--            android:max="3"/>-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- ProgressBar -->
+            <ProgressBar
+                android:id="@+id/user_order_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="360dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="4dp"
+                android:max="3"
+                android:progress="0"
+                android:progressDrawable="@drawable/progress_bar_states" />
+
+            <!-- Pin for Processing (Position 0) -->
+            <ImageView
+                android:id="@+id/pin_processing"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:backgroundTint="@color/gray"
+                android:src="@drawable/ic_dot"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@id/user_order_progress_bar"
+                android:layout_marginStart="2dp"
+                />
+
+            <!-- Pin for Packing (Position 1) -->
+            <ImageView
+                android:id="@+id/pin_packing"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_dot"
+                android:layout_alignTop="@id/user_order_progress_bar"
+                android:layout_marginStart="110dp"
+               />
+
+            <!-- Pin for Shipped (Position 2) -->
+            <ImageView
+                android:id="@+id/pin_shipped"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_dot"
+                android:layout_alignTop="@id/user_order_progress_bar"
+                android:layout_marginStart="220dp"
+                 />
+
+            <!-- Pin for Delivered (Position 3) -->
+            <ImageView
+                android:id="@+id/pin_delivered"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_dot"
+                android:layout_alignTop="@id/user_order_progress_bar"
+                android:layout_marginStart="358dp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

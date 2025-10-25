@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@color/white"
+    android:elevation="2dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/light_gray" />
+
+    <!-- Order ID -->
+    <TextView
+        android:id="@+id/order_history_text_order_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Order ID: #12345"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Order Date -->
+    <TextView
+        android:id="@+id/order_history_text_order_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/cherryswash_regular"
+        android:paddingTop="4dp"
+        android:text="Ordered On: 01 Jan 2025"
+        android:textColor="@color/default_gray"
+        android:textSize="14sp" />
+
+    <!-- Total Amount -->
+    <TextView
+        android:id="@+id/order_history_text_total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="@font/cherryswash_bold"
+        android:paddingTop="4dp"
+        android:text="Total: Rs. 999.00"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginVertical="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/light_gray" />
+
+    <!-- Products RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/order_history_recycler_products"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:nestedScrollingEnabled="false" />
+</LinearLayout>

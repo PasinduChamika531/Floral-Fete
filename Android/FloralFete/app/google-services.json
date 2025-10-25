@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "662029313296",
+    "project_id": "floral-fete",
+    "storage_bucket": "floral-fete.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:662029313296:android:6011062ae3ed41e6a93195",
+        "android_client_info": {
+          "package_name": "com.example.floralfete"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUbcAHiicVDxXXV_sWOABSDneqlrpiCr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

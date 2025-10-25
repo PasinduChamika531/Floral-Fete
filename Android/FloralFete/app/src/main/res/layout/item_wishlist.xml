@@ -1,0 +1,96 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/product_item_bg"
+    android:gravity="center">
+
+    <!-- Product Image -->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/productImage"-->
+    <!--        android:layout_width="180dp"-->
+    <!--        android:layout_height="180dp"-->
+    <!--        android:layout_marginTop="2dp"-->
+    <!--        android:layout_marginBottom="2dp"-->
+    <!--        android:contentDescription="Product Image"-->
+    <!--        android:scaleType="centerCrop"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/productName"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/wishlist_productimage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:contentDescription="Product Image"
+            android:scaleType="centerCrop" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Product Name -->
+
+    <!-- Product Price -->
+
+    <!-- Add to Cart Button -->
+
+    <TextView
+        android:id="@+id/wishlist_productname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/cherryswash_bold"
+
+        android:paddingTop="5dp"
+        android:text="Product Name"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/wishlist_button_heart"-->
+    <!--        android:layout_width="35dp"-->
+    <!--        android:layout_height="35dp"-->
+    <!--        android:background="@drawable/ic_filled_heart"-->
+    <!--        android:textColor="@android:color/white"-->
+    <!--        android:textSize="14sp"-->
+    <!--        tools:layout_editor_absoluteX="8dp"-->
+    <!--        tools:layout_editor_absoluteY="196dp" />-->
+
+    <ImageView
+        android:id="@+id/wishlist_button_heart"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wishlist_productname"
+        app:srcCompat="@drawable/ic_filled_heart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

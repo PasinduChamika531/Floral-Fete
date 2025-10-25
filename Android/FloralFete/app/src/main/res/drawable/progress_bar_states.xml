@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background Layer (Gray for unfilled progress) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="6dp"/>
+            <solid android:color="#E0E0E0"/> <!-- Light gray background -->
+        </shape>
+    </item>
+
+    <!-- Progress Layer (Dynamic Progress Color) -->
+    <item android:id="@android:id/progress">
+        <clip android:drawable="@drawable/progress_gradient"/>
+    </item>
+
+</layer-list>

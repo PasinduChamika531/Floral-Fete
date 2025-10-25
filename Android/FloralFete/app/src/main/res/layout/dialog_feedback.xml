@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/dialog_background">
+
+    <TextView
+        android:id="@+id/order_history_text_feedback_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/cherryswash_bold"
+        android:text="Add Feedback"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/order_history_edit_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="Write your feedback here..."
+        android:gravity="top"
+
+        android:padding="10dp"
+        android:inputType="textMultiLine"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/order_history_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/light_gray"
+            android:fontFamily="@font/cherryswash_bold"
+            android:padding="8dp"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/order_history_btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/theme_color"
+            android:fontFamily="@font/cherryswash_bold"
+            android:padding="8dp"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

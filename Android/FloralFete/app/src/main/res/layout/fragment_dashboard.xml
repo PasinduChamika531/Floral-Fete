@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:fillViewport="true">
+    
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/linearLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Total Product Count TextView -->
+
+    <!-- Total User Count TextView -->
+    <Button
+        android:id="@+id/totalProductCount"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:fontFamily="@font/cherryswash_bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Total Products: 0"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/totalUserCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Total Earnings TextView -->
+    <Button
+        android:id="@+id/totalUserCount"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:fontFamily="@font/cherryswash_bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Total Users: 0"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/totalProductCount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Total Flower Type Count TextView -->
+    <Button
+        android:id="@+id/totalEarnings"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:fontFamily="@font/cherryswash_bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Total Earnings: $0"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/totalFlowerTypeCount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalProductCount" />
+
+    <!-- Pie Chart for Order Status -->
+    <Button
+        android:id="@+id/totalFlowerTypeCount"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/box_theme_color"
+        android:fontFamily="@font/cherryswash_bold"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Total Flower Types: 0"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/totalEarnings"
+        app:layout_constraintTop_toBottomOf="@+id/totalUserCount" />
+
+    <!-- Bar Chart for Weekly Sales -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/totalEarnings" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pieChart" />
+
+    <TextView
+        android:id="@id/dashboard_textview2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/cherryswash_bold"
+        android:text="Most Sold Products"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pieChart" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_textview2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

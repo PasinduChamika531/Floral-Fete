@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cherryswash_bold"
+        android:paddingTop="8dp"
+        android:text="@string/cart_title"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Empty Cart Message (Hidden by Default) -->
+    <LinearLayout
+        android:id="@+id/empty_cart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:lottie_rawRes="@raw/cart_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/cherryswash_bold"
+            android:paddingTop="8dp"
+            android:text="@string/cart_text1"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Cart Items List (RecyclerView) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_cart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <!-- Total Price and Checkout Section -->
+    <LinearLayout
+        android:id="@+id/cart_total_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:id="@+id/text_total_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="Total: $0.00"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_checkout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/theme_color"
+            android:text="Proceed to Checkout" />
+    </LinearLayout>
+
+</LinearLayout>

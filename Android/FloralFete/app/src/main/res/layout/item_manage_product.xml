@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageProduct"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textProductName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textProductPrice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageEdit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_update" />
+
+    <ImageView
+        android:id="@+id/imageDelete"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_delete" />
+</LinearLayout>
